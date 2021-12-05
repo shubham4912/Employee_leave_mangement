@@ -77,7 +77,7 @@ class emp:
                     #print(m1)
                     return self.emp_info
                 else:
-                    print(f"{id} he is alradey manger")
+                    print("{} he is alradey manger".format(id))
             
             else:
                 print("Employee ID is invalid")

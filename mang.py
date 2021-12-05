@@ -14,8 +14,8 @@ class manger():
                     mang.append(k)
                 else:
                     emp.append(k)
-            print(f"Manger are{mang}")
-            print(f"Employees are{emp}")
+            print("Manger are{}".format(mang))
+            print("Employees are{}".format(emp))
             if len(mang)==0:
                 print("Manger is not avilable fist add manger")
             else:
@@ -23,7 +23,7 @@ class manger():
                 mang_id=int(input())
                 if mang_id in mang:
                     mang.remove(mang_id)
-                    print(f"Enter employee id want to assign under manger ({mang_id})") 
+                    print("Enter employee id want to assign under manger ({})".format(mang_id)) 
                     emp_id=int(input())
                     if emp_id in emp:
                         emp.remove(emp_id)
@@ -31,11 +31,11 @@ class manger():
                         self.mang_data[mang_id]=[{emp_id:d1}] 
                 while True:
                     if len(emp)!=0:
-                        print(f"Do you want to assign more employee under same manger press y else assign employee under another manger press o ")
+                        print("Do you want to assign more employee under same manger press y else assign employee under another manger press o ")
                         op=input()
                         if op=="y":
                             print("avilable employee: ",emp)
-                            emp_id=int(input(f"Enter employee id want to assign  under manger({mang_id}) : "))
+                            emp_id=int(input("Enter employee id want to assign  under manger({mang_id}) : ").format(mang_id))
                             if emp_id in emp:
                                 emp.remove(emp_id)
                                 d1=data.get(emp_id)
@@ -54,7 +54,7 @@ class manger():
                             mang_id2=int(input())
                             if mang_id2 in mang :  
                                 mang.remove(mang_id2) 
-                                print(f"Enter employee id want to assign under manger ({mang_id2})") 
+                                print("Enter employee id want to assign under manger ({})".format(mang_id2)) 
                                 emp_id=int(input())
                                 if emp_id in emp:
                                     emp.remove(emp_id)
@@ -63,11 +63,11 @@ class manger():
                                     
                                     while True:
                                         if len(emp)!=0:
-                                            print(f"Do you want to assign more employee under same manger press y else press n")
+                                            print("Do you want to assign more employee under same manger press y else press n")
                                             op=input()
                                             if op=="y":
                                                 print("avilable employee: ",emp)
-                                                emp_id=int(input(f"Enter employee id want to assign  under manger({mang_id2}) : "))
+                                                emp_id=int(input("Enter employee id want to assign  under manger({}}) : ").format(mang_id2))
                                                 if emp_id in emp:
                                                     emp.remove(emp_id)
                                                     d1=data.get(emp_id)
@@ -247,7 +247,7 @@ class manger():
         else:
             c=0
             for k,v1 in self.mang_data.items():
-                print(f"Employee Working under manger {k} is: ")
+                print("Employee Working under manger {} is: ".format(k))
                 das="-"*63
                 print(das)
                 print("{:<15}|  {:<10}|  {:<18}|  {:<10}".format("Employee Id","Name","position","leave"))
